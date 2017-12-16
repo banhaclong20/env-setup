@@ -1,5 +1,7 @@
+// Style is just for testing autoprefix and compile into CSS
+
 $navy: #DDD;
-$green: #4e4e4e;
+$grey: #4e4e4e;
 
 html {
   background-color: $navy;
@@ -17,14 +19,15 @@ body {
 }
 
 h1 {
-  color: $green;
+  color: $grey;
   font-weight: bold;
   font-size: 3.5rem;
-  animation: wave .75s infinite linear alternate;
+  transform: translateX(10px);
+  animation: rotate 1s infinite linear alternate;
 }
 
-@keyframes wave {
+@keyframes rotate {
   100% {
-    transform: rotate(20deg);
+    transform: rotate(10deg);
   }
 }

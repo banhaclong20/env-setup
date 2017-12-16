@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
     entry: path.join(__dirname, 'src', 'components', 'App.js'),
@@ -15,8 +16,8 @@ module.exports = {
                 use: 'babel-loader'
             }, 
             {
-                test: /\.scss$/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                test: /\.(css|scss|sass)$/,
+                use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
             },
             {
                 test: /\.(jpe?g|png|gif)$/,
