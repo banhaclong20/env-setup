@@ -1,0 +1,30 @@
+$navy: #DDD;
+$green: #4e4e4e;
+
+html {
+  background-color: $navy;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background: url('../assets/spiration-light.png');
+}
+
+h1 {
+  color: $green;
+  font-weight: bold;
+  font-size: 3.5rem;
+  animation: wave .75s infinite linear alternate;
+}
+
+@keyframes wave {
+  100% {
+    transform: rotate(20deg);
+  }
+}
